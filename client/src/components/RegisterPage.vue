@@ -128,7 +128,7 @@ export default {
       this.isSubmitting = true;
 
       try {
-        await axios.post("http://127.0.0.1:8000/api/register", this.form);
+        await axios.post(`${import.meta.env.VITE_API_BASE_URL}/register`, this.form);
         toast.success("registration successful",{position:'top'});
         this.$router.push("/login");
       } catch (error) {
