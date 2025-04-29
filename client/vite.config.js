@@ -6,12 +6,12 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vite.dev/config/
 export default defineConfig({
+    base: '/task-management-php/',
   plugins: [
     vue(),
     vueDevTools(),
   ],
-  base: '/task-management-php/'
-,
+
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
